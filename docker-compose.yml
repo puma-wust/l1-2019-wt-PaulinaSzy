@@ -5,5 +5,11 @@ services:
     image: probabilistic/ipython_pyro
     ports:
       - 8888:8888
+    environment:
+      - NB_USER=paulina
+      - NB_UID=1001
+    working_dir: /home/paulina
+    user: root
     volumes:
-      - ./data:/home/jovyan
+      - ./data:/home/paulina
+    
